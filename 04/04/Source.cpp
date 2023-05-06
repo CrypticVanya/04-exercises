@@ -112,7 +112,7 @@ void  processSelection(int userNum) {
 */
 
 /*
-//exercise 2
+//exercise 3
 
 int askUser(string);
 
@@ -241,6 +241,50 @@ int posNum(string prompt) {
 			cout << "Please, enter a positive number";
 		}
 	} while (validEntry);
+
+	return userNum;
+}
+
+*/
+
+/*
+//exercise 6
+
+double const GRAV = 9.8;
+double posNum(string);
+
+int main() {
+	double mass = 0,
+		   weight = 0;
+	
+	mass = posNum("what is the mass of the object? ");
+
+	weight = (mass * GRAV);
+
+	if (weight > 1000) {
+		cout << "The weight is " << weight << " and thats way too heavy of an object";
+	}
+	else if (weight < 10) {
+		cout << "The weight is " << weight << " and thats way too light of an object";
+	}
+	else {
+		cout << "The weight is " << weight << " and that is between the acceptable range";
+	}
+
+}
+
+double posNum(string prompt) {
+	double userNum = 0;
+	bool validNum = true; 
+	
+	do {
+		cout << prompt;
+		cin >> userNum;
+		validNum = (userNum < 0);
+		if (validNum) {
+			cout << "Please, enter a valid entry";
+		}
+	} while (validNum);
 
 	return userNum;
 }
